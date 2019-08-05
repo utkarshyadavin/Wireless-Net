@@ -7,6 +7,9 @@
 	* Understood basic functionality of how radio transmitter and antenna work using feeder lines to produce and receive radio waves. 
 	* Basics of what is antenna gain and how it is calculated. [wiki](https://en.wikipedia.org/wiki/Antenna_gain)
 	* Finished reading about link budget from [here](https://www.electronics-notes.com/articles/antennas-propagation/propagation-overview/radio-link-budget-formula-calculator.php) and [wiki](https://en.wikipedia.org/wiki/Link_budget)
+* **5/08/2019** 
+	* Finished reading about link budget form [Tranzeo Link Budget Whitepaper](http://www.tranzeo.com/allowed/Tranzeo_Link_Budget_Whitepaper.pdf)
+	* Finished reading [The Sky Is Not the Limit: LTE for Unmanned Aerial Vehicles](https://ieeexplore.ieee.org/document/8337920) with few doubts. 
 
 ## Reading Resources 
 * **2/08/2019**
@@ -22,6 +25,10 @@
 	* [Wireless link budget analysis](http://www.tranzeo.com/allowed/Tranzeo_Link_Budget_Whitepaper.pdf) 
 	* [Overview of 3GPP Release-15 Study on Enhanced LTE Support for Connected Drones](https://arxiv.org/pdf/1805.00826.pdf)
 	* Paper describing the [architecture of LTE equipment](https://www.fujitsu.com/global/documents/about/resources/publications/fstj/archives/vol48-1/paper11.pdf) (eNodeB)
+* **5/08/2019**
+	* [An Overview of 3GPP Release-15 Study on Enhanced LTE Support for Connected Drones](https://arxiv.org/abs/1805.00826)
+	* [Mobile Networks Connected Drones: Field Trials, Simulations, and Design Insights](https://arxiv.org/abs/1801.10508)
+	* [Interference Mitigation Methods for Unmanned Aerial Vehicles Served by Cellular Networks](https://arxiv.org/abs/1802.00223)
 
 ## Doubt Section 
 * **2/08/2019**
@@ -31,4 +38,6 @@
 	* What is a dipole in an antenna?
 	* Better understanding for antenna gain...
 	* How antenna gain reduces interference?
+* **5/08/2019** 
+	* Need some more intuition on Sound to Noise Ratio.
 ## Random 
