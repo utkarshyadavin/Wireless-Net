@@ -10,6 +10,9 @@
 * **5/08/2019** 
 	* Finished reading about link budget form [Tranzeo Link Budget Whitepaper](http://www.tranzeo.com/allowed/Tranzeo_Link_Budget_Whitepaper.pdf)
 	* Finished reading [The Sky Is Not the Limit: LTE for Unmanned Aerial Vehicles](https://ieeexplore.ieee.org/document/8337920) with few doubts. 
+* **7/08/2019**
+	* Completed reading about centrality from [Network Analysis and Centrality Measures (Part-I)](https://www.hackerearth.com/practice/notes/network-analysis-and-centrality-measures-part-i/). 
+	* Read basics of Social network from this [paper](https://pdfs.semanticscholar.org/75a9/829c84e345595bc6d50322abb823fd8831eb.pdf).
 
 ## Reading Resources 
 * **2/08/2019**
@@ -29,6 +32,9 @@
 	* [An Overview of 3GPP Release-15 Study on Enhanced LTE Support for Connected Drones](https://arxiv.org/abs/1805.00826)
 	* [Mobile Networks Connected Drones: Field Trials, Simulations, and Design Insights](https://arxiv.org/abs/1801.10508)
 	* [Interference Mitigation Methods for Unmanned Aerial Vehicles Served by Cellular Networks](https://arxiv.org/abs/1802.00223)
+* **7/08/2019** 
+	* [Social network representation basics](https://pdfs.semanticscholar.org/75a9/829c84e345595bc6d50322abb823fd8831eb.pdf)
+	* [Types of Centrality in a graph](https://www.hackerearth.com/practice/notes/network-analysis-and-centrality-measures-part-i/)
 
 ## Doubt Section 
 * **2/08/2019**
