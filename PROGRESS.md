@@ -13,6 +13,10 @@
 * **7/08/2019**
 	* Completed reading about centrality from [Network Analysis and Centrality Measures (Part-I)](https://www.hackerearth.com/practice/notes/network-analysis-and-centrality-measures-part-i/). 
 	* Read basics of Social network from this [paper](https://pdfs.semanticscholar.org/75a9/829c84e345595bc6d50322abb823fd8831eb.pdf).
+* **8/08/2019**
+	* Understood the basic intuition and calculations of degree, betweenness and closeness centrality from [here](https://cs.brynmawr.edu/Courses/cs380/spring2013/section02/slides/05_Centrality.pdf)
+	* Finished reading Part A,B and C of the paper: [Analysing Human Mobility and Social Relationships from Cellular Data](https://ieeexplore.ieee.org/document/8256044). Confusion over some mathematical expressions. 
+
 
 ## Reading Resources 
 * **2/08/2019**
@@ -36,6 +40,7 @@
 	* [Social network representation basics](https://pdfs.semanticscholar.org/75a9/829c84e345595bc6d50322abb823fd8831eb.pdf)
 	* [Types of Centrality in a graph](https://www.hackerearth.com/practice/notes/network-analysis-and-centrality-measures-part-i/)
 
+
 ## Doubt Section 
 * **2/08/2019**
 	* How does a femtocell connects to the main cellular network? How is it different from connecting a WiFi router to the internet?
@@ -46,4 +51,8 @@
 	* How antenna gain reduces interference?
 * **5/08/2019** 
 	* Need some more intuition on Sound to Noise Ratio.
+
+
 ## Random 
+* **8/08/2019**
+	* [Wiki](https://en.wikipedia.org/wiki/Near-me_area_network) of Near-me area Network(NAN). Explains the benefits of NAN over LAN
