@@ -16,6 +16,11 @@
 * **8/08/2019**
 	* Understood the basic intuition and calculations of degree, betweenness and closeness centrality from [here](https://cs.brynmawr.edu/Courses/cs380/spring2013/section02/slides/05_Centrality.pdf)
 	* Finished reading Part A,B and C of the paper: [Analysing Human Mobility and Social Relationships from Cellular Data](https://ieeexplore.ieee.org/document/8256044). Confusion over some mathematical expressions. 
+* **9/09/2019** 
+	* Basics of [radiation pattern](https://www.tutorialspoint.com/antenna_theory/antenna_theory_radiation_pattern.htm)
+* **10/08/2019**
+	* Basics of Handoffs from [wiki](https://en.wikipedia.org/wiki/Handover). Read about when handoffs takes place, how they take place, soft and hard handoffs, practical implementation, causes of failure of handovers, handoff prioritisation, etc. 
+	* The [youtube](https://www.youtube.com/watch?v=dhsphf0Mnhs&list=PLjGG94etKypKeb0nzyN9tSs_HCd5c4wXF&index=26) video covers basics of cell division, frequency reuse pattern, FDMA, TDMA and 2G GSM technology.  
 
 
 ## Reading Resources 
@@ -39,6 +44,9 @@
 * **7/08/2019** 
 	* [Social network representation basics](https://pdfs.semanticscholar.org/75a9/829c84e345595bc6d50322abb823fd8831eb.pdf)
 	* [Types of Centrality in a graph](https://www.hackerearth.com/practice/notes/network-analysis-and-centrality-measures-part-i/)
+* **9/08/2019**
+	* Brief about Antenna Gain, Apperture Efficiency, Antenna Efficiency and Gain from [tutorials point](https://www.tutorialspoint.com/antenna_theory/antenna_theory_parameters.htm)
+	* Brief on Impedence Matching and Voltage Standing Wave Ratio from [tutorials point](https://www.tutorialspoint.com/antenna_theory/antenna_theory_basic_parameters.htm)
 
 
 ## Doubt Section 
@@ -51,6 +59,12 @@
 	* How antenna gain reduces interference?
 * **5/08/2019** 
 	* Need some more intuition on Sound to Noise Ratio.
+* **9/08/2019** 
+	* Need some intuition on the characterstics of near field and far feild on how they differ in wave propogation mechanism. 
+	* What does it mean when we say "there is 50% percent resource utilisation in a network"
+	* What is Interference over Thermal Noise(IoT). 
+* **10/08/2019**
+	* How exactly transferring voice different from transferring data in a cellular network given the fact that both of them are just z0s and 1s. 
 
 
 ## Random 
