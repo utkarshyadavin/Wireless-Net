@@ -20,7 +20,9 @@
 	* Basics of [radiation pattern](https://www.tutorialspoint.com/antenna_theory/antenna_theory_radiation_pattern.htm)
 * **10/08/2019**
 	* Basics of Handoffs from [wiki](https://en.wikipedia.org/wiki/Handover). Read about when handoffs takes place, how they take place, soft and hard handoffs, practical implementation, causes of failure of handovers, handoff prioritisation, etc. 
-	* The [youtube](https://www.youtube.com/watch?v=dhsphf0Mnhs&list=PLjGG94etKypKeb0nzyN9tSs_HCd5c4wXF&index=26) video covers basics of cell division, frequency reuse pattern, FDMA, TDMA and 2G GSM technology.  
+	* The [youtube](https://www.youtube.com/watch?v=dhsphf0Mnhs&list=PLjGG94etKypKeb0nzyN9tSs_HCd5c4wXF&index=26) video covers basics of cell division, frequency reuse pattern, FDMA, TDMA and 2G GSM technology. 
+* **13/08/2019** 
+	* Complete writing a simple simulator that associates UEs to the nearest BaseStation. 
 
 
 ## Reading Resources 
