@@ -3,6 +3,7 @@ import java.awt.geom.Point2D;
 
 public class UE{         // Class for UserEquipments/Nobile Devices
 	public int id; 
+	public double receivedPower;
 	public Point2D location;
 	public BS target;
 

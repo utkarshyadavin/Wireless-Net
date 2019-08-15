@@ -27,25 +27,29 @@ class Simulation{
 		}
 
 		for(UE ue:setUE){    //Shortest distance based association of UE to BS
-			double minDist = 9999999; 
 			BS targetBS = null;
-
+			double maxPower = -1;
 			for(BS bs:setBS){
 				double dist = bs.location.distance(ue.location);
-					if(dist<=minDist){
-						minDist = dist;
-						targetBS = bs;
-					}
+				int count = bs.associatedUEs.size() + 1; 
+				double power = (bs.power)/(count*dist*dist);
+				if(power>=maxPower){
+					maxPower = power;
+					targetBS = bs;
+				}
 			}
 			ue.target = targetBS;
+			ue.receivedPower = maxPower;
 			targetBS.associatedUEs.add(ue);
 		}
 		
 		System.out.println("Printing UE Infromation");
 		System.out.println();
-		System.out.println("UE id" + "            " + "Location" + "                                             " + "Target BS");
+		System.out.println("UE id" + "            " + "Location" + "                                             "
+		 + "Target BS" + "        " + "Received Power");
 		for(UE ue:setUE){
-			System.out.println(ue.id + "       " + ue.location + "             " + ue.target.id);
+			System.out.println(ue.id + "       " + ue.location + "             " + ue.target.id + "       " 
+				+ ue.receivedPowerls);
 		}	
 
 		System.out.println("\nPrinting BS Infromation\n");
