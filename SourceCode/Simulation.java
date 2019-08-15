@@ -28,28 +28,26 @@ class Simulation{
 
 		for(UE ue:setUE){    //Shortest distance based association of UE to BS
 			BS targetBS = null;
-			double maxPower = -1;
+			double maxBandwidth = -1;
 			for(BS bs:setBS){
-				double dist = bs.location.distance(ue.location);
+				//double dist = bs.location.distance(ue.location);
 				int count = bs.associatedUEs.size() + 1; 
-				double power = (bs.power)/(count*dist*dist);
-				if(power>=maxPower){
-					maxPower = power;
+				int bandwidth = (bs.bandwidth)/(count);
+				if(bandwidth>=maxBandwidth){
+					maxBandwidth = bandwidth;
 					targetBS = bs;
 				}
 			}
 			ue.target = targetBS;
-			ue.receivedPower = maxPower;
 			targetBS.associatedUEs.add(ue);
 		}
 		
 		System.out.println("Printing UE Infromation");
 		System.out.println();
 		System.out.println("UE id" + "            " + "Location" + "                                             "
-		 + "Target BS" + "        " + "Received Power");
+		 + "Target BS" );
 		for(UE ue:setUE){
-			System.out.println(ue.id + "       " + ue.location + "             " + ue.target.id + "       " 
-				+ ue.receivedPowerls);
+			System.out.println(ue.id + "       " + ue.location + "             " + ue.target.id);
 		}	
 
 		System.out.println("\nPrinting BS Infromation\n");
