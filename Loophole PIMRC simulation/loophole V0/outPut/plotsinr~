@@ -1,0 +1,37 @@
+reset
+set terminal postscript eps enhanced color size 10cm, 5cm
+set key bottom right inside
+
+set output "MacroSinr.eps"
+set xlabel "SINR (dB)"
+set ylabel "C.D.F."
+set yrange [0:1]
+set xrange [-5:30]
+plot "mSinr_1" using 1:2 title 'Max RSRP' with lines,\
+		 "mSinr_2" using 1:2 title 'Max RSRP+Bias' with lines,\
+		 "mSinr_3" using 1:2 title 'E[B]' with lines,\
+		 "mSinr_4" using 1:2 title 'E[B-]' with lines
+
+
+set output "femtoSinr.eps"
+set xlabel "SINR (dB)"
+set ylabel "C.D.F."
+set yrange [0:1]
+set xrange [-25:30]
+plot "fSinrIL_1" using 1:2 title 'Max RSRP' with lines,\
+     "fSinrIL_2" using 1:2 title 'Max RSRP+Bias' with lines,\
+     "fSinrIL_3" using 1:2 title 'E[B]' with lines,\
+     "fSinrIL_4" using 1:2 title 'E[B-]' with lines
+
+
+set output "allSinr.eps"
+set xlabel "SINR (dB)"
+set ylabel "C.D.F."
+set yrange [0:1]
+set xrange [-25:30]
+plot "allSinr_1" using 1:2 title 'Max RSRP' with lines,\
+     "allSinr_2" using 1:2 title 'Max RSRP+Bias' with lines,\
+     "allSinr_3" using 1:2 title 'E[B]' with lines,\
+     "allSinr_4" using 1:2 title 'E[B-]' with lines 
+
+

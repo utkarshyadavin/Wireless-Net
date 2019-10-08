@@ -1,0 +1,10 @@
+reset
+set terminal postscript eps enhanced color size 20cm,10cm
+
+set pm3d at s      # draw on bottom, not as 3d surface
+set view map       # don't do a 3-d looking plot
+set dgrid 100,100  # grid of 100x100 pixels
+set palette gray
+set output "REM.eps"
+splot 'remap.dat' using 1:2:3 title "M" w pm3d,\
+			'remap.dat' using 1:2:4 title "F" w pm3d

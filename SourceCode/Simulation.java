@@ -4,6 +4,7 @@ import java.util.HashSet;
 import java.util.Set;
 import java.lang.Math;
 import java.io.PrintStream;
+import java.util.Arrays; 
 import java.text.DecimalFormat; 
 import java.io.BufferedOutputStream;
 import java.io.File;
@@ -96,6 +97,24 @@ class Simulation{
 		}
 	}
 
+	public static void generateCDF(double ueBitrates[], double ueSinr[], int index){
+		Arrays.sort(ueBitrates);
+		Arrays.sort(ueSinr);
+		double cdf [] = new double [index];
+		for(int i =0; i<index; i++){
+			double temp = (double)(i+1)/(double)index;
+			cdf[i] = temp;
+		}
+		System.out.println("\nCDF Values\n");
+		for(int i =0; i<index; i++)
+			System.out.println(cdf[i]);
+		System.out.println("\nBitrate Values\n");
+		for(int i =0; i<index; i++)
+			System.out.println(ueBitrates[i]);
+		System.out.println("\nSINR Values\n");
+		for(int i =0; i<index; i++)
+			System.out.println(ueSinr[i]);
+	}
 
 	public static void printAssociationDetails(String message){ // Prints details about UE and BS connections along 
 		// with bitrate and SINR values
@@ -106,7 +125,9 @@ class Simulation{
 				"                                  \n" );
 			System.out.println("Printing UE Infromation\n");
 			DecimalFormat numberFormat = new DecimalFormat("#.000");
-			double c = 0; 
+			double ueBitrates[] = new double[100];
+			double ueSinr[] = new double[100];
+			int index = 0;
 			for(UE ue:setUE){
 				BS connectedBS = ue.target;	
 				double dist = connectedBS.location.distance(ue.location);
@@ -126,12 +147,14 @@ class Simulation{
 				int numberOfSubchannels = Parameters.SUBCHANNELS/count; 
 				bitrate = numberOfSubchannels*bitrate;
 				bitrate = bitrate/(double)1000000; // bit rate in Mbps
-				c = c + bitrate;
+				ueBitrates[index] = bitrate;
+				ueSinr[index] = sinr;
+				index++;
 				System.out.println("UE id: " + ue.id + " X: " + numberFormat.format(ue.location.getX()) + " Y: " 
 					+ numberFormat.format(ue.location.getY()) + " Bs id: " + ue.target.id + " BitRate: " +
 					numberFormat.format(bitrate) + " mbps SINR: " + numberFormat.format(sinr));
 			}
-			System.out.println("Total  bit rate : " + c);
+			generateCDF(ueBitrates, ueSinr, index);
 			System.out.println("\nPrinting BS Infromation\n");
 			for(BS bs:setBS){
 				System.out.println("BS id: " + bs.id + " X: " + numberFormat.format(bs.location.getX()) + " Y: " + 

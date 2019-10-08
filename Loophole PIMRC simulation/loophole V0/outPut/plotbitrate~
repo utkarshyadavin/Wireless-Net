@@ -1,0 +1,33 @@
+reset
+set terminal postscript eps enhanced size 10cm,5cm
+set key bottom right inside
+
+set output "MacroBitRate.eps"
+set xlabel "Throughput (bps/Hz)"
+set ylabel "C.D.F."
+set yrange [0:1]
+set xrange [0:0.5]
+plot "mBitRate_1" using 1:2 title 'Max RSRP' with lines,\
+		 "mBitRate_2" using 1:2 title 'Max RSRP+Bias' with lines,\
+		 "mBitRate_3" using 1:2 title 'E[B]' with lines,\
+		 "mBitRate_4" using 1:2 title 'E[B-]' with lines 
+
+set output "femtoBitRate.eps"
+set xlabel "Throughput (bps/Hz)"
+set ylabel "C.D.F."
+set yrange [0:1]
+set xrange [0:50]
+plot "fBitRate_1" using 1:2 title 'Max RSRP' with lines,\
+		 "fBitRate_2" using 1:2 title 'Max RSRP+Bias' with lines,\
+ 		 "fBitRate_3" using 1:2 title 'E[B]' with lines,\
+		 "fBitRate_4" using 1:2 title 'E[B-]' with lines 
+
+set output "allBitRate.eps"
+set xlabel "Throughput (bps/Hz)"
+set ylabel "C.D.F."
+set yrange [0:1]
+set xrange [0:50]
+plot "allBitRate_1" using 1:2 title 'Max RSRP' with lines,\
+		 "allBitRate_2" using 1:2 title 'Max RSRP+Bias' with lines,\
+ 		 "allBitRate_3" using 1:2 title 'E[B]' with lines,\
+		 "allBitRate_4" using 1:2 title 'E[B-]' with lines 

@@ -1,0 +1,19 @@
+reset
+set terminal postscript eps enhanced color size 20cm,10cm
+set key bottom right inside
+set xlabel "Bit Rate"
+set ylabel "CDF"
+set xrange [-600:600]
+set yrange [-600:600]
+set zrange [-1:1]
+set isosamples 50
+set pm3d
+unset surface
+set view map
+set contour
+set key outside
+set palette color
+
+set output "REM.eps"
+splot "remap" using 2:3:4 title "REM" with image
+

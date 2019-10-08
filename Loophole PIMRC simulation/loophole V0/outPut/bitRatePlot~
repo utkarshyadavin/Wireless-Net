@@ -1,0 +1,11 @@
+reset
+set terminal postscript eps enhanced color size 20cm,10cm
+set key bottom right inside
+set xlabel "Bit Rate"
+set ylabel "CDF"
+
+set key bottom right inside
+set pm3d at b
+set output "REM.eps"
+	splot "bitRatePlot" using 1:2:3 title 'macro' smooth csplines
+	 		 

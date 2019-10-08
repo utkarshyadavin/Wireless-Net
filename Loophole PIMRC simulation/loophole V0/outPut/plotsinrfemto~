@@ -1,0 +1,10 @@
+reset
+set terminal postscript eps enhanced color size 20cm,10cm
+set key bottom right inside
+
+set output "femtoSinr.eps"
+set xlabel "SINR"
+set ylabel "CDF"
+set yrange [0:1]
+set xrange [-40:40]
+plot "fSinrILRSRP" using 1:2 title 'RSRP IL' with lines
