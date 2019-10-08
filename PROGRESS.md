@@ -32,6 +32,18 @@
 	* Added function for LeastDistanceAssociation of UEs. 
 	* Added function for MaxRsrpBasedAssociation for UEs.
 	* Added function for Max Bitrate based Association. 
+* **1/9/2018 - 8/10/2019** 
+	* Completed writing a basic simulator for collaborative(Operator & Social) Cellular network for the following scenarios: 
+	 	* Zero operator and Social Collaboration
+	 	* Partial Operator and Social Collaboration
+	 	* Partial Operator and Zero Social Collaboration
+	 	* Complete Operator and Zero Operator Collaboration
+	 * Read the following set of research papers:
+	 	* [On the Performance Analysis and Relay Algorithm Design in Social-Aware D2D Cooperated Communications](https://ieeexplore.ieee.org/document/7504379)
+	 	* [A novel relay selection algorithm based on mobile social networks for device-to-device cooperative communications](https://ieeexplore.ieee.org/document/8393215)
+	 	* [Social-aware relay selection for device to device communications in cooperative cellular networks](https://ieeexplore.ieee.org/document/8075812)
+	 	* [Cooperative device-to-device communications in cellular networks](https://ieeexplore.ieee.org/abstract/document/7143335)
+
 
 
 ## Reading Resources 
@@ -57,7 +69,7 @@
 	* [Types of Centrality in a graph](https://www.hackerearth.com/practice/notes/network-analysis-and-centrality-measures-part-i/)
 * **9/08/2019**
 	* Brief about Antenna Gain, Apperture Efficiency, Antenna Efficiency and Gain from [tutorials point](https://www.tutorialspoint.com/antenna_theory/antenna_theory_parameters.htm)
-	* Brief on Impedence Matching and Voltage Standing Wave Ratio from [tutorials point](https://www.tutorialspoint.com/antenna_theory/antenna_theory_basic_parameters.htm)
+	* Brief on Impedence Matching and Voltage Standing Wave allocateBW();Ratio from [tutorials point](https://www.tutorialspoint.com/antenna_theory/antenna_theory_basic_parameters.htm)
 
 
 ## Doubt Section 
