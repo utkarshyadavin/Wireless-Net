@@ -11,4 +11,5 @@ public class Params {
 	public static final int TOTALOPERATORS = 6;
 	public static final int TOTALOPERATORCOLLABORATION = 3;
 	public static final int TOTALSOCIALCOLLABORATION = 230;	
+	public static final int CDF_STEP = 1000;
 }

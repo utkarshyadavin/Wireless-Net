@@ -21,7 +21,6 @@ public class CDFHelper {
 		this.minValue = minValue;
 		this.stepSize = stepCount;
 		this.fName = fName;
-		runs = 0;
 		cdfProb = new double[this.stepSize];
 		this.stepLength = (this.maxValue - this.minValue) / stepCount;
 	}
@@ -31,7 +30,6 @@ public class CDFHelper {
 		double cdfSize = cdfList.size();
 		if(cdfSize == 0)
 			return;
-		runs++;
 		Collections.sort(cdfList);
 		for(int i =0;i<stepSize;i++)
 		{
@@ -45,18 +43,14 @@ public class CDFHelper {
 	}
 	public void saveToFile()
 	{
-		if(runs==0)
-		{
-			System.err.println("ERROR : Nothing to write.");
-			return;
-		}
+
 		try
 		{
 			PrintWriter cdfWriter = new PrintWriter(fName);
 			for(int i =0;i<stepSize;i++)
 			{
 				double value = stepLength * i + minValue;
-				cdfWriter.printf("%3.5f %5.5f \n", value, cdfProb[i]/runs);
+				cdfWriter.printf("%3.5f %5.5f \n", value, cdfProb[i]);
 			}
 			cdfWriter.close();
 		}

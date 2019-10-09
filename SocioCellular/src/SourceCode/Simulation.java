@@ -13,6 +13,16 @@ import java.util.concurrent.ThreadLocalRandom;
 public class Simulation {
 	private Set<UE> setUE = new HashSet<UE>();
 	private Set<BS> setBS = new HashSet<BS>();
+
+	public ArrayList<Double> sinrFullOperatorCollaboration;
+	public ArrayList<Double> bitrateFullOperatorCollaboration;
+	public ArrayList<Double> sinrZeroOperatorCollaboration;
+	public ArrayList<Double> bitrateZeroOperatorCollaboration;
+	public ArrayList<Double> sinrPartialOperatorCollaboration;
+	public ArrayList<Double> bitratePartialOperatorCollaboration;
+	public ArrayList<Double> sinrSocialOperatorCollaboration;
+	public ArrayList<Double> bitrateSocialOperatorCollaboration;
+	
 	private ArrayList<HashSet<Integer>> operatorCollaboration =  
 		new ArrayList<HashSet<Integer>>();
 	private ArrayList<HashSet<Integer>> socialCollaboration = 
@@ -88,6 +98,8 @@ public class Simulation {
 	
 	public void associationRSRP() {
 		resetStats();
+		sinrZeroOperatorCollaboration = new ArrayList<Double>();
+		bitrateZeroOperatorCollaboration = new ArrayList<Double>();
 		for(UE u:setUE) {								// Max RSRQ based association without operator collaboration
 			double maxRSRP = -999999;
 			BS targetBS=null;
@@ -115,11 +127,23 @@ public class Simulation {
 			if(u.target!=null)
 				targetBS.associatedUEs.add(u);
 		}
+
+		for(UE u:setUE) {
+			if(u.target!=null) {
+			double bitrate = (Params.BANDWIDTH/u.target.associatedUEs.size())*Math.log10(1+u.sinr)/0.3010;
+				sinrZeroOperatorCollaboration.add(u.sinr);
+				bitrateZeroOperatorCollaboration.add(bitrate);
+				
+			}
+		}
+		
 		
 	}
 	
 	public void associationRSRPCollaboration() {
 		resetStats();
+		sinrFullOperatorCollaboration = new ArrayList<Double>();
+		bitrateFullOperatorCollaboration = new ArrayList<Double>();
 		for(UE u:setUE) {								// Max RSRQ based association with (full/all) operator collaboration
 			double maxRSRP = -999999;
 			BS targetBS=null;
@@ -148,12 +172,22 @@ public class Simulation {
 			if(u.target!=null)
 				targetBS.associatedUEs.add(u);
 		}
-		
+	
+		for(UE u:setUE) {
+			if(u.target!=null) {
+			double bitrate = (Params.BANDWIDTH/u.target.associatedUEs.size())*Math.log10(1+u.sinr)/0.3010;
+				sinrFullOperatorCollaboration.add(u.sinr);
+				bitrateFullOperatorCollaboration.add(bitrate);
+			}
+			
+		}
 	}
 	
 
  public void associationRSRPPartialOperatorCollaboration() {
 		resetStats();
+		sinrPartialOperatorCollaboration = new ArrayList<Double>();
+		bitratePartialOperatorCollaboration = new ArrayList<Double>();
 		for(UE u:setUE) {								// Max RSRQ based association with (full/all) operator collaboration
 			double maxRSRP = -999999;
 			BS targetBS=null;
@@ -188,11 +222,20 @@ public class Simulation {
 			if(u.target!=null)
 				targetBS.associatedUEs.add(u);
 		}
+		for(UE u:setUE) {
+			if(u.target!=null) {
+			double bitrate = (Params.BANDWIDTH/u.target.associatedUEs.size())*Math.log10(1+u.sinr)/0.3010;
+				sinrPartialOperatorCollaboration.add(u.sinr);
+				bitratePartialOperatorCollaboration.add(bitrate);
+			}
+		}
 		
 	}
 	
    public void associationRSRPSocialPartialOperatorCollaboration() {
 		resetStats();
+		sinrSocialOperatorCollaboration = new ArrayList<Double>();
+		bitrateSocialOperatorCollaboration = new ArrayList<Double>();
 		for(UE u:setUE) {								// Max RSRQ based association with (full/all) operator collaboration
 			double maxRSRP = -999999;
 			BS targetBS=null;
@@ -232,7 +275,14 @@ public class Simulation {
 			if(u.target!=null)
 				targetBS.associatedUEs.add(u);
 		}
-		
+		for(UE u:setUE) {
+			if(u.target!=null) {
+			double bitrate = (Params.BANDWIDTH/u.target.associatedUEs.size())*Math.log10(1+u.sinr)/0.3010;
+				sinrSocialOperatorCollaboration.add(u.sinr);
+				bitrateSocialOperatorCollaboration.add(bitrate);
+			}
+		}
+
 	}
 
 	private void resetStats() {
